@@ -1,17 +1,15 @@
-- title: Student, Harvard CS
-  from: 2014
-  to: 2018
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: Student, Peking University
+  from: 2020
+  to: 2024
+  description: I studied Political Science and Economics. I mainly focused on 
+                Industrial Policy and Political Economy. I am familiar with Neo-Schumpeterian Economics
+                and am interested in how government-led industrial policy can possibly create new 
+                space for firms to innovate and grow. I also did research on administrative reform 
+                and election. 
+                
 
-- title: Software Engineer, Google, UK
-  from: 2018
+- title: Student, University of Chicago
+  from: 2024
   to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  description: I studied Computer Science and Public Policy. I develop web application 
+                and write short analysis using data tools.

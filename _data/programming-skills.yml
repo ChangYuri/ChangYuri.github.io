@@ -7,5 +7,5 @@
   color:
 
 - name: Python
-  percentage: 70
-  color: secondary
+  percentage: 100
+  color: danger
