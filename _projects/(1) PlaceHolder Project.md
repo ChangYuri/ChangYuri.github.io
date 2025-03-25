@@ -1,7 +1,7 @@
 ---
-name: PlaceHolder Project
-tools: [nothing, important]
-image: https://www.sketchappsources.com/resources/source-image/project-neon-groove-music-ui.png
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-external_url: https://www.google.com
+name: Chicago Living Score
+tools: [Python, html]
+image: ../assets/website1.png
+description: This project develops an interactive, map-based platform to help individuals—especially those considering a move to Chicago—assess potential housing options.
+#external_url: https://www.google.com
 ---
