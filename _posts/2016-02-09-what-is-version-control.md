@@ -11,6 +11,7 @@ description: How local Administrative Division Reform affect their government sc
 Source: [English Abstract please click here: cnki](https://www.cnki.net/KCMS/detail/detail.aspx?dbcode=CCJD&dbname=CCJDLAST2&filename=BDZP202401010&uniplatform=OVERSEA&v=J-D1exqrsxsZBZciuPDPUF1TJ-IuaqA0vVVg13DvmuOfxna1W5zGBdEKAqnR3bLk)
 
 
+![Image](/assets/post_one.png)
 
 ## "City-County merge"
 
