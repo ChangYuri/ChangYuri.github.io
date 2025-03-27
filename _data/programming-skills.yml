@@ -5,16 +5,16 @@
 
 - name: R Studio
   percentage: 80
-  color: info
+  color: success
 
 - name: STATA
   percentage: 80
-  color: info
+  color: success
 
 - name: SQL
   percentage: 80
-  color: info
+  color: success
 
 - name: HTML5/CSS3
   percentage: 40
-  color: danger
+  color: info

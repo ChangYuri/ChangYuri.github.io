@@ -1,0 +1,11 @@
+- name: Manderin
+  percentage: 100
+  color: success
+
+- name: English
+  percentage: 100
+  color: success
+
+- name: Spanish
+  percentage: 40
+  color: info
