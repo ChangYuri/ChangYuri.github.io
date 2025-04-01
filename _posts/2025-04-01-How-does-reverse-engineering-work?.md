@@ -1,6 +1,6 @@
 ---
 title: How does reverse engineering work?
-tags: [Innovation Theory, Political Economics]
+tags: [Innovation Theory, Political Economy]
 style: fill
 color: warning
 description: How much reverse engineering can help techonology deveopment
