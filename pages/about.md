@@ -18,12 +18,15 @@ I am a data scientist currently studying at the University of Chicago. I focus o
 </div>
 <br>
 -->
+<br>
 
 ### Education
 
 - **B.A. in Political Science, B.A. in Economics**, Peking University, China (2020 — 2024)
 
 - **M.S. in Computational Analysis and Public Policy**, The University of Chicago, USA (2024 — present)
+
+<br>
 
 ### Key qualifications
 
@@ -34,10 +37,14 @@ I am a data scientist currently studying at the University of Chicago. I focus o
 - Experience with international investment due diligence and familiarity with ESG frameworks (MSCI, S&P).
 - Proven written and verbal communication skills; experience coordinating cross-departmental projects and evaluating government-funded programs.
 
+<br>
+
 ### Teaching assistant
 
 - *Politics and Policies in China* — PLSC 27815 (Instructor: Prof. Dali Yang), Winter 2025
 - *Data Analytics and Visualization for Public Policy* — PPHA 30538 (Instructors: Prof. Peter Ganong, Prof. Maggie Shi), Winter 2026
+
+<br>
 
 ### Personal
 
