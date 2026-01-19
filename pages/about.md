@@ -7,11 +7,11 @@ weight: 1
 
 ### About Me
 
-<h4>
+
 My name is **{{ site.author.name }}**.
 
 Welcome — I am a data scientist currently studying at the University of Chicago. I focus on using data to make complex policy and economic topics more understandable.
-</h4>
+
 
 
 ### Key qualifications
