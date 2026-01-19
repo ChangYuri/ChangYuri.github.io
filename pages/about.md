@@ -12,10 +12,18 @@ My name is **{{ site.author.name }}**.
 
 I am a data scientist currently studying at the University of Chicago. I focus on using data to make complex policy and economic topics more understandable.
 
+<!--->
 <div class="row">
 {% include about/timeline.html %}
 </div>
+<br>
+<!--->
 
+### Education
+
+- **Bachelor of Arts in Political Science, Bachelor of Arts in Economics**, Peking University, China (2020 — 2024)
+
+- **Master of Science in Computational Analysis and Public Policy**, The University of Chicago, USA (2024 — present)
 
 ### Key qualifications
 
