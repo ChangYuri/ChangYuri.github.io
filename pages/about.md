@@ -18,10 +18,5 @@ With data, I wish to show these details more accurately and objectively.
 Outside school, I love coding, cooking, hiking and reading. Feel free to contact me.
 
 <div class="row">
-{% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
-{% include about/skills.html title="Language Skills" source=site.data.language-skills %}
-</div>
-
-<div class="row">
 {% include about/timeline.html %}
 </div>
