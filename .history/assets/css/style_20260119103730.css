@@ -1,0 +1,60 @@
+/* Local overrides to make markdown rendering clearer
+   Placed in your site's `assets/css/style.css` so the theme will pick it up
+   on build and override the remote theme defaults where needed.
+*/
+
+.markdown-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: #212529;
+}
+
+/* Headings */
+.markdown-body h1,
+.markdown-body h1 strong {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-body h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0.9rem;
+  margin-bottom: 0.45rem;
+}
+
+/* Paragraphs and lists */
+.markdown-body p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-body strong {
+  font-weight: 700;
+}
+
+/* Make sure timeline and skill columns have comfortable spacing on wide screens */
+@media (min-width: 992px) {
+  .col-lg-10.mx-auto {
+    max-width: 980px;
+  }
+}
+
+/* If you want to undo theme color/weight overrides for nav or other elements,
+   you can add more rules here.
+*/

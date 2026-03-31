@@ -1,0 +1,27 @@
+/* Local overrides: make timeline text smaller and reduce spacing */
+
+.timeline-body .timeline-item .content {
+  margin: 20px; /* shrink spacing */
+  padding-bottom: 12px;
+  border-bottom-width: 1px;
+}
+
+.timeline-body .timeline-item .content h2 {
+  font-size: 1rem; /* smaller heading */
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-body .timeline-item .content .date {
+  font-size: 0.85rem; /* smaller date */
+  margin-bottom: 8px;
+}
+
+.timeline-body .timeline-item .content p {
+  font-size: 0.95rem; /* slightly smaller paragraph */
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+/* If you need an even smaller size, adjust the values above (e.g. h2: 0.95rem, p: 0.9rem).
+   This file is loaded after the theme's CSS so it overrides defaults. */
