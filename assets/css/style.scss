@@ -2,140 +2,379 @@
 ---
 @import "portfolYOU";
 
-/* ============================================================
-   Professional Style Overrides — Yuri Chang
-   ============================================================ */
+/* ================================================================
+   Theme — Yuri Chang
+   ================================================================ */
 
-/* --- Custom Properties --- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* ---- Variables ------------------------------------------------- */
 :root {
-  --color-primary: #1e50a2;
-  --color-primary-hover: #163d80;
-  --color-primary-light: rgba(30, 80, 162, 0.07);
+  --primary:       #1e50a2;
+  --primary-light: rgba(30, 80, 162, 0.06);
+  --text:          #111827;
+  --muted:         #6b7280;
+  --border:        #e5e7eb;
+  --bg-subtle:     #f9fafb;
 }
 
-/* --- Base Typography --- */
+:root[data-theme="dark"] {
+  --text:      rgba(255, 255, 255, 0.88);
+  --muted:     rgba(255, 255, 255, 0.45);
+  --border:    rgba(255, 255, 255, 0.09);
+  --bg-subtle: #242526;
+}
+
+/* ---- Base ------------------------------------------------------ */
 body {
-  letter-spacing: -0.01em;
-  line-height: 1.78;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+  color: var(--text);
 }
 
-/* --- Navbar: Subtle separator + consistent padding --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* ---- Navbar ---------------------------------------------------- */
 .navbar-themed {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  padding-top: 0.85rem;
-  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
 }
 
-[data-theme="dark"] .navbar-themed {
-  border-bottom-color: rgba(255, 255, 255, 0.06);
+.navbar-brand h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0;
 }
 
-/* --- Accent Color: Replace Bootstrap blue with refined navy --- */
+.navbar-nav .nav-link {
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+}
+
+/* No underline slide animation */
+.nav-link::after,
+.navbar-brand::after {
+  transition: none;
+}
+
+/* Keep primary color on active/hover underlines */
 .link-after,
 .nav-link::after,
 .navbar-brand::after,
 .nav-item.active::after {
-  background: var(--color-primary);
+  background: var(--primary);
 }
 
-.post-metadata .tag:hover {
-  background-color: var(--color-primary);
+/* ---- Markdown content ------------------------------------------ */
+.markdown-body h3 {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 2.4rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline):hover {
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
 .markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline)::after {
-  background: var(--color-primary);
+  background: var(--primary);
 }
 
 .markdown-body blockquote {
-  border-left: 3px solid var(--color-primary);
-  background: var(--color-primary-light);
-  border-radius: 0 4px 4px 0;
+  border-left: 2px solid var(--primary);
+  background: var(--primary-light);
+  border-radius: 0 3px 3px 0;
   padding: 0.6em 1.1em;
-  color: #4a5568;
+  color: #374151;
 }
 
 .markdown-body table:not(.highlight) th {
-  background-color: var(--color-primary);
+  background-color: var(--primary);
 }
 
-/* --- Timeline: Color only --- */
-.timeline-body:after {
-  background-color: var(--color-primary);
+.markdown-body pre {
+  border-radius: 4px;
+  border: none;
+  background: var(--bg-subtle);
+  box-shadow: 0 0 0 1px var(--border);
+  font-size: 13px;
 }
 
-.timeline-body .timeline-item:after {
-  border-color: var(--color-primary);
+.markdown-body code.highlighter-rouge {
+  background-color: var(--bg-subtle);
+  border-radius: 3px;
 }
 
-/* --- Cards: Less rounded, refined shadow --- */
+/* ---- Badges ---------------------------------------------------- */
+.badge {
+  font-size: 10.5px;
+  font-weight: 500;
+  border-radius: 3px;
+  letter-spacing: 0.01em;
+}
+
+[data-theme="light"] .badge-light {
+  background-color: var(--bg-subtle) !important;
+  color: #374151 !important;
+  border: 1px solid var(--border);
+}
+
+/* ---- Cards ----------------------------------------------------- */
 .post.card {
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 2px 10px rgba(0, 0, 0, 0.04);
-  transition: box-shadow 240ms ease, transform 240ms ease;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  box-shadow: none;
+  padding: 15px;
+  height: 100%;
+  transition: border-color 150ms ease;
 }
 
 .post.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08), 0 8px 22px rgba(0, 0, 0, 0.05);
+  transform: none;
+  box-shadow: none;
+  border-color: #9ca3af;
 }
 
 .project.card {
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 2px 10px rgba(0, 0, 0, 0.04);
-  transition: box-shadow 240ms ease, transform 240ms ease;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  box-shadow: none;
+  margin: 10px auto;
+  transition: border-color 150ms ease;
 }
 
 .project.card .card-img-top {
-  border-radius: 8px 8px 0 0;
+  border-radius: 6px 6px 0 0;
 }
 
 .project.card:hover:not(.post) {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09), 0 10px 26px rgba(0, 0, 0, 0.06);
+  transform: none;
+  box-shadow: none;
+  border-color: #9ca3af;
 }
 
-/* --- Progress Bars: Unified primary color --- */
+/* ---- Tags ------------------------------------------------------ */
+.post-metadata .tag:hover {
+  background-color: var(--primary);
+}
+
+.post-metadata {
+  font-size: 13px;
+}
+
+/* ---- Timeline -------------------------------------------------- */
+.timeline-body:after {
+  background-color: var(--border);
+  width: 1px;
+  left: -1px;
+}
+
+.timeline-body .timeline-item:after {
+  border: 2px solid var(--primary);
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  left: -6px;
+  top: 10px;
+}
+
+.timeline-body .timeline-item .content .date {
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Progress bars --------------------------------------------- */
 .progress-bar.bg-danger,
 .progress-bar.bg-success,
 .progress-bar.bg-info,
 .progress-bar.bg-warning {
-  background-color: var(--color-primary) !important;
+  background-color: var(--primary) !important;
 }
 
-/* --- Code Blocks: Cleaner look --- */
-.markdown-body pre {
-  border-radius: 6px;
-  border: none;
-  background: #f4f6f9;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.07);
-}
-
-/* --- Profile Image: Subtle definition --- */
+/* ---- Profile image --------------------------------------------- */
 .circle-image {
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* --- Dark Mode Adjustments --- */
+/* ---- Landing page ---------------------------------------------- */
+.landing-hero {
+  padding: 4rem 0 3rem;
+}
+
+.landing-name {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.landing-role {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 0.15rem;
+}
+
+.landing-affiliation {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 1.1rem;
+  line-height: 1.55;
+}
+
+.landing-bio {
+  font-size: 0.88rem;
+  color: #374151;
+  line-height: 1.65;
+  max-width: 460px;
+  margin-bottom: 1.25rem;
+}
+
+.landing-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: center;
+}
+
+.landing-link {
+  font-size: 0.78rem;
+  color: var(--muted) !important;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 120ms ease;
+}
+
+.landing-link:hover {
+  color: var(--primary) !important;
+}
+
+/* ---- Blog list ------------------------------------------------- */
+.blog-search .search-box {
+  font-size: 13px;
+  border-radius: 4px;
+  max-width: 400px;
+  border-color: var(--border);
+}
+
+.blog-search .search-box:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.15rem rgba(30, 80, 162, 0.15);
+}
+
+.blog-list {
+  margin-top: 0.5rem;
+}
+
+.blog-post-item {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-post-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.blog-post-link {
+  display: block;
+  color: var(--text) !important;
+  text-decoration: none !important;
+}
+
+.blog-post-link::after {
+  display: none !important;
+}
+
+.blog-post-date {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.blog-post-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+  transition: color 120ms ease;
+  text-transform: none;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.blog-post-link:hover .blog-post-title {
+  color: var(--primary);
+}
+
+.blog-post-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.blog-tag {
+  font-size: 0.72rem;
+}
+
+.blog-search-result {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.blog-search-empty {
+  font-size: 0.82rem;
+  padding: 0.5rem 0;
+}
+
+/* ---- Dark mode adjustments ------------------------------------- */
 [data-theme="dark"] .post.card,
 [data-theme="dark"] .project.card {
-  border-color: rgba(255, 255, 255, 0.07);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 2px 10px rgba(0, 0, 0, 0.25);
+  border-color: var(--border);
 }
 
 [data-theme="dark"] .post.card:hover,
 [data-theme="dark"] .project.card:hover:not(.post) {
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 8px 22px rgba(0, 0, 0, 0.3);
+  transform: none;
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 [data-theme="dark"] .markdown-body blockquote {
   background: rgba(30, 80, 162, 0.15);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+[data-theme="dark"] .markdown-body h3 {
+  color: var(--muted);
+  border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .timeline-body .timeline-item:after {
+  background-color: #17191a;
 }
 
 [data-theme="dark"] .progress-bar.bg-danger,
@@ -143,4 +382,8 @@ body {
 [data-theme="dark"] .progress-bar.bg-info,
 [data-theme="dark"] .progress-bar.bg-warning {
   background-color: #4a7fcb !important;
+}
+
+[data-theme="dark"] .landing-bio {
+  color: var(--muted);
 }

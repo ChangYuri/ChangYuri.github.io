@@ -75,70 +75,44 @@
 </nav>
     <!-- Simple-Jekyll-Search https://github.com/christian-fei/Simple-Jekyll-Search -->
 
-<div class="input-group mt-5 px-3">
-  <input id="search-input" type="text" class="form-control search-box" placeholder="Search posts..">
-  <div class="input-group-append">
-    <span class="input-group-text border border-primary bg-primary text-white">
-      <i class="fas fa-search"></i>
-    </span>
-  </div>
-  <button class="btn btn-outline-primary ml-1" onclick="location.href = '/blog/tags';">
-    <i class="fas fa-tags"></i>
-  </button>
+<div class="blog-search mt-4">
+  <input id="search-input" type="text" class="form-control search-box" placeholder="Search posts…">
 </div>
-<ul class="px-3" id="results-container"></ul>
+<ul class="list-unstyled mt-2" id="results-container"></ul>
 
 <script src="https://cdn.rawgit.com/christian-fei/Simple-Jekyll-Search/master/dest/simple-jekyll-search.min.js"></script>
 <script>
-  var sjs = SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        searchResultTemplate: '<a href="{url}" class="list-group-item list-group-item-action">{title}</a>',
-        noResultsText: '<li class="list-group-item list-group-item-action disabled">No results found</li>',
-        json: '/search.json'
-      })
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    searchResultTemplate: '<li class="blog-search-result"><a href="{url}" class="no-underline">{title}</a></li>',
+    noResultsText: '<li class="text-muted blog-search-empty">No results found.</li>',
+    json: '/search.json'
+  })
 </script>
-<div class="card-group mt-2">
+
+<div class="blog-list mt-3">
+  
+    <div class="blog-post-item">
+  <a href="/blog/How-does-reverse-engineering-work" class="blog-post-link no-underline">
+    <span class="blog-post-date">Apr 1, 2025</span>
+    <h3 class="blog-post-title">How does reverse engineering work?</h3>
+    <p class="blog-post-meta"><span class="blog-tag">Innovation Theory</span> &middot; <span class="blog-tag">Political Economy</span> &mdash; How much reverse engineering can help techonology deveopment</p>
+  </a>
+</div>
 
   
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/How-does-reverse-engineering-work" class="post card bg-warning">
-    <div class="card-body text-white">
-      <h3 class="card-title">How does reverse engineering work?</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-light text-warning">Innovation Theory</span>
-        
-        <span class="badge badge-light text-warning">Political Economy</span>
-        
-      </p>
-      <p class="card-text">How much reverse engineering can help techonology deveopment</p>
-    </div>
-    <div class="card-footer text-white">
-      01 April 2025
-    </div>
+    <div class="blog-post-item">
+  <a href="/blog/what-is-version-control" class="blog-post-link no-underline">
+    <span class="blog-post-date">Jun 30, 2024</span>
+    <h3 class="blog-post-title">Published Paper. Administrative Division Reform and Government Scale:Evidence from City-County Merge?</h3>
+    <p class="blog-post-meta"><span class="blog-tag">Public Administration</span> &mdash; How local Administrative Division Reform affect their government scale.</p>
   </a>
 </div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/what-is-version-control" class="post card bg-secondary">
-    <div class="card-body text-white">
-      <h3 class="card-title">Published Paper. Administrative Division Reform and Government Scale:Evidence from City-County Merge?</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-light text-secondary">Public Administration</span>
-        
-      </p>
-      <p class="card-text">How local Administrative Division Reform affect their government scale.</p>
-    </div>
-    <div class="card-footer text-white">
-      30 June 2024
-    </div>
-  </a>
-</div>
-  
+
   
 </div>
+
   </main>
   <footer class="mt-auto py-3 text-center">
 

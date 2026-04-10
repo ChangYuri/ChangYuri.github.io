@@ -1,0 +1,21 @@
+{%- if post.external_url -%}
+  {%- assign post_url = post.external_url -%}
+{%- else -%}
+  {%- assign post_url = post.url | relative_url -%}
+{%- endif -%}
+
+<div class="blog-post-item">
+  <a href="{{ post_url }}" class="blog-post-link no-underline"{% if post.external_url and site.open_new_tab %} target="_blank"{% endif %}>
+    <span class="blog-post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <h3 class="blog-post-title">{{ post.title }}</h3>
+    <p class="blog-post-meta">
+      {%- for tag in post.tags -%}
+        <span class="blog-tag">{{ tag }}</span>{% unless forloop.last %} &middot; {% endunless %}
+      {%- endfor -%}
+      {%- if post.description -%}
+        {%- if post.tags.size > 0 %} &mdash; {% endif -%}
+        {{ post.description }}
+      {%- endif -%}
+    </p>
+  </a>
+</div>

@@ -1,0 +1,47 @@
+<div class="landing-hero">
+  <div class="row align-items-center">
+
+    <div class="col-md-3 col-5 mb-4 mb-md-0">
+      <div id="container">
+        <div id="dummy"></div>
+        <div id="element">
+          <img
+            src="{{ site.author.image }}"
+            alt="{{ site.author.name }}"
+            class="circle-image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-9 col-7 pl-md-5">
+      <h1 class="landing-name text-themed">{{ site.author.name }}</h1>
+      <p class="landing-role">Data Scientist &amp; Policy Researcher</p>
+      <p class="landing-affiliation">
+        M.S. in Computational Analysis and Public Policy<br>
+        University of Chicago
+      </p>
+      {% if site.tagline %}
+      <p class="landing-bio">{{ site.tagline }}</p>
+      {% endif %}
+      <div class="landing-contact">
+        {% if site.author.email %}
+        <a href="mailto:{{ site.author.email }}" class="landing-link no-underline">
+          <i class="fas fa-envelope fa-xs"></i>&ensp;{{ site.author.email }}
+        </a>
+        {% endif %}
+        {% if site.author.github %}
+        <a href="https://github.com/{{ site.author.github }}" class="landing-link no-underline" target="_blank">
+          <i class="fab fa-github fa-xs"></i>&ensp;{{ site.author.github }}
+        </a>
+        {% endif %}
+        {% if site.author.linkedin %}
+        <a href="https://linkedin.com/in/{{ site.author.linkedin }}" class="landing-link no-underline" target="_blank">
+          <i class="fab fa-linkedin fa-xs"></i>&ensp;LinkedIn
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</div>

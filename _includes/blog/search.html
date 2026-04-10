@@ -1,0 +1,17 @@
+<!-- Simple-Jekyll-Search https://github.com/christian-fei/Simple-Jekyll-Search -->
+
+<div class="blog-search mt-4">
+  <input id="search-input" type="text" class="form-control search-box" placeholder="Search posts…">
+</div>
+<ul class="list-unstyled mt-2" id="results-container"></ul>
+
+<script src="https://cdn.rawgit.com/christian-fei/Simple-Jekyll-Search/master/dest/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    searchResultTemplate: '<li class="blog-search-result"><a href="{url}" class="no-underline">{title}</a></li>',
+    noResultsText: '<li class="text-muted blog-search-empty">No results found.</li>',
+    json: '{{ "/search.json" | relative_url }}'
+  })
+</script>
